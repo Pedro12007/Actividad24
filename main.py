@@ -50,16 +50,31 @@ while True:
 
     match option:
         case '1':
-            n = int(input('Ingrese el número para factorial: '))
-            print(f'Factorial: {factorial(n)}')
+            try:
+                n = int(input('Ingrese el número para factorial: '))
+                print(f'Factorial: {factorial(n)}')
+            except ValueError:
+                print('Dato ingresado inválido.')
+            except Exception as e:
+                print('Un error ha ocurrido.', e)
 
         case '2':
-            n = int(input('Ingrese el número para suma: '))
-            print(f'Suma: {suma(n)}')
+            try:
+                n = int(input('Ingrese el número para suma: '))
+                print(f'Suma: {suma(n)}')
+            except ValueError:
+                print('Dato ingresado inválido.')
+            except Exception as e:
+                print('Un error ha ocurrido.', e)
 
         case '3':
-            n = int(input('Ingrese el n-ésimo de Fibonacci: '))
-            print(f'n-ésimo de Fibonacci {n}: {fibonacci(n)}')
+            try:
+                n = int(input('Ingrese el n-ésimo de Fibonacci: '))
+                print(f'n-ésimo de Fibonacci #{n}: {fibonacci(n)}')
+            except ValueError:
+                print('Dato ingresado inválido.')
+            except Exception as e:
+                print('Un error ha ocurrido.', e)
 
         case '4':
             pass
@@ -68,9 +83,14 @@ while True:
             pass
 
         case '6':
-            base = int(input('Ingrese la base: '))
-            exponente = int(input('Ingrese el exponente del número: '))
-            print(f'Potencia base: {base}; exponente: {exponente} = {potencia(base, exponente)}')
+            try:
+                base = int(input('Ingrese la base: '))
+                exponente = int(input('Ingrese el exponente del número: '))
+                print(f'Potencia base: {base}; exponente: {exponente} = {potencia(base, exponente)}')
+            except ValueError:
+                print('Dato ingresado inválido.')
+            except Exception as e:
+                print('Un error ha ocurrido.', e)
 
         case '7':
             print('Saliendo del programa...')
