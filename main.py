@@ -28,6 +28,14 @@ def letra_en_palabra(letra, palabra):
     if letra in palabra:
         pass
 
+def potencia(base, exp):
+    if exp == 0:
+        return 1
+    elif exp == 1:
+        return base
+    else:
+        return base * potencia(base, exp-1)
+
 while True:
     print('Menú:')
     print('1. Calcular el factorial')
@@ -60,7 +68,13 @@ while True:
             pass
 
         case '6':
-            pass
+            base = int(input('Ingrese la base: '))
+            exponente = int(input('Ingrese el exponente del número: '))
+            print(f'Potencia base: {base}; exponente: {exponente} = {potencia(base, exponente)}')
 
         case '7':
-            pass
+            print('Saliendo del programa...')
+            break
+
+        case _:
+            print('Opción inválida.\n')
